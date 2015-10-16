@@ -24,7 +24,6 @@ class Word < ActiveRecord::Base
 
   def self.stresses(syllables=ordered_syllables)
     return syllables.map {|s| s.stress ? true : false}
-    # return syllables.map(&:stress)
   end
 
   def self.phones(syllables=ordered_syllables)
